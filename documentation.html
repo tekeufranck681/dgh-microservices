@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoHealth Microservices Documentation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #2c7be5;
+      --secondary-color: #6e84a3;
+      --success-color: #00d97e;
+      --info-color: #2c7be5;
+      --warning-color: #f6c343;
+      --danger-color: #e63757;
+      --light-bg: #f9fafd;
+      --card-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+      --border-radius: 0.375rem;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #12263f;
+      background-color: var(--light-bg);
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      color: var(--secondary-color);
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #e3ebf6;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-right: 1rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+    }
+
+    .card-header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid #e3ebf6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .service-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .service-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.5rem;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tag-shared {
+      background-color: #e1f0ff;
+      color: var(--primary-color);
+    }
+
+    .tag-track1 {
+      background-color: #d6f3e7;
+      color: #008a4a;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    .service-link {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 0;
+      color: var(--secondary-color);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      border-bottom: 1px solid #f2f6fa;
+    }
+
+    .service-link:last-child {
+      border-bottom: none;
+    }
+
+    .service-link:hover {
+      color: var(--primary-color);
+    }
+
+    .link-icon {
+      margin-right: 0.75rem;
+      width: 24px;
+      text-align: center;
+      color: var(--primary-color);
+    }
+
+    .link-text {
+      flex: 1;
+    }
+
+    .link-url {
+      font-size: 0.85rem;
+      color: #95aac9;
+      word-break: break-all;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e3ebf6;
+      color: var(--secondary-color);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>DGH Microservices Documentation from GENE Z Team</h1>
+      <p class="subtitle">Comprehensive documentation for all microservices powering the EcoHealth platform</p>
+    </header>
+
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title"><i class="fas fa-cubes" style="margin-right: 10px;"></i> Shared Services</h2>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Auth Service -->
+        <div class="service-card">
+          <div class="card-header">
+            <h3 class="service-name">Auth Service</h3>
+            <span class="service-tag tag-shared">Shared</span>
+          </div>
+          <div class="card-body">
+            <a href="https://auth-microservice-d9nd.onrender.com" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-globe"></i></span>
+              <span class="link-text">Live URL</span>
+              <span class="link-url">auth-microservice-d9nd.onrender.com</span>
+            </a>
+            <a href="https://auth-microservice-d9nd.onrender.com/docs" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-file-alt"></i></span>
+              <span class="link-text">Swagger Docs</span>
+              <span class="link-url">/docs</span>
+            </a>
+            <a href="https://auth-microservice-d9nd.onrender.com/redoc" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-book"></i></span>
+              <span class="link-text">ReDoc Docs</span>
+              <span class="link-url">/redoc</span>
+            </a>
+            <a href="https://auth-microservice-d9nd.onrender.com/openapi.json" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-code"></i></span>
+              <span class="link-text">OpenAPI JSON</span>
+              <span class="link-url">/openapi.json</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Event Service -->
+        <div class="service-card">
+          <div class="card-header">
+            <h3 class="service-name">Event Service</h3>
+            <span class="service-tag tag-shared">Shared</span>
+          </div>
+          <div class="card-body">
+            <a href="https://event-microservice.onrender.com" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-globe"></i></span>
+              <span class="link-text">Live URL</span>
+              <span class="link-url">event-microservice.onrender.com</span>
+            </a>
+            <a href="https://event-microservice.onrender.com/docs" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-file-alt"></i></span>
+              <span class="link-text">Swagger Docs</span>
+              <span class="link-url">/docs</span>
+            </a>
+            <a href="https://event-microservice.onrender.com/redoc" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-book"></i></span>
+              <span class="link-text">ReDoc Docs</span>
+              <span class="link-url">/redoc</span>
+            </a>
+            <a href="https://event-microservice.onrender.com/openapi.json" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-code"></i></span>
+              <span class="link-text">OpenAPI JSON</span>
+              <span class="link-url">/openapi.json</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Notification Service -->
+        <div class="service-card">
+          <div class="card-header">
+            <h3 class="service-name">Notification Service</h3>
+            <span class="service-tag tag-shared">Shared</span>
+          </div>
+          <div class="card-body">
+            <a href="https://notification-service-egij.onrender.com" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-globe"></i></span>
+              <span class="link-text">Live URL</span>
+              <span class="link-url">notification-service-egij.onrender.com</span>
+            </a>
+            <a href="https://notification-service-egij.onrender.com/docs" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-file-alt"></i></span>
+              <span class="link-text">Swagger Docs</span>
+              <span class="link-url">/docs</span>
+            </a>
+            <a href="https://notification-service-egij.onrender.com/redoc" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-book"></i></span>
+              <span class="link-text">ReDoc Docs</span>
+              <span class="link-url">/redoc</span>
+            </a>
+            <a href="https://notification-service-egij.onrender.com/openapi.json" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-code"></i></span>
+              <span class="link-text">OpenAPI JSON</span>
+              <span class="link-url">/openapi.json</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Translation Service -->
+        <div class="service-card">
+          <div class="card-header">
+            <h3 class="service-name">Translation Service</h3>
+            <span class="service-tag tag-shared">Shared</span>
+          </div>
+          <div class="card-body">
+            <a href="https://translation-service-ue64.onrender.com" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-globe"></i></span>
+              <span class="link-text">Live URL</span>
+              <span class="link-url">translation-service-ue64.onrender.com</span>
+            </a>
+            <a href="https://translation-service-ue64.onrender.com/docs" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-file-alt"></i></span>
+              <span class="link-text">Swagger Docs</span>
+              <span class="link-url">/docs</span>
+            </a>
+            <a href="https://translation-service-ue64.onrender.com/redoc" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-book"></i></span>
+              <span class="link-text">ReDoc Docs</span>
+              <span class="link-url">/redoc</span>
+            </a>
+            <a href="https://translation-service-ue64.onrender.com/openapi.json" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-code"></i></span>
+              <span class="link-text">OpenAPI JSON</span>
+              <span class="link-url">/openapi.json</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title"><i class="fas fa-project-diagram" style="margin-right: 10px;"></i> Track-1 Microservices</h2>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Feedback Input Service -->
+        <div class="service-card">
+          <div class="card-header">
+            <h3 class="service-name">Feedback Input Service</h3>
+            <span class="service-tag tag-track1">Track-1</span>
+          </div>
+          <div class="card-body">
+            <a href="https://feedback-input-service.onrender.com" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-globe"></i></span>
+              <span class="link-text">Live URL</span>
+              <span class="link-url">feedback-input-service.onrender.com</span>
+            </a>
+            <a href="https://feedback-input-service.onrender.com/docs" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-file-alt"></i></span>
+              <span class="link-text">Swagger Docs</span>
+              <span class="link-url">/docs</span>
+            </a>
+            <a href="https://feedback-input-service.onrender.com/redoc" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-book"></i></span>
+              <span class="link-text">ReDoc Docs</span>
+              <span class="link-url">/redoc</span>
+            </a>
+            <a href="https://feedback-input-service.onrender.com/openapi.json" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-code"></i></span>
+              <span class="link-text">OpenAPI JSON</span>
+              <span class="link-url">/openapi.json</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Feedback Analysis Service -->
+        <div class="service-card">
+          <div class="card-header">
+            <h3 class="service-name">Feedback Analysis Service</h3>
+            <span class="service-tag tag-track1">Track-1</span>
+          </div>
+          <div class="card-body">
+            <a href="https://patient-feedback-reminder.onrender.com" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-globe"></i></span>
+              <span class="link-text">Live URL</span>
+              <span class="link-url">patient-feedback-reminder.onrender.com</span>
+            </a>
+            <a href="https://patient-feedback-reminder.onrender.com/docs" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-file-alt"></i></span>
+              <span class="link-text">Swagger Docs</span>
+              <span class="link-url">/docs</span>
+            </a>
+            <a href="https://patient-feedback-reminder.onrender.com/redoc" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-book"></i></span>
+              <span class="link-text">ReDoc Docs</span>
+              <span class="link-url">/redoc</span>
+            </a>
+            <a href="https://patient-feedback-reminder.onrender.com/openapi.json" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-code"></i></span>
+              <span class="link-text">OpenAPI JSON</span>
+              <span class="link-url">/openapi.json</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Reminder Service -->
+        <div class="service-card">
+          <div class="card-header">
+            <h3 class="service-name">Reminder Service</h3>
+            <span class="service-tag tag-track1">Track-1</span>
+          </div>
+          <div class="card-body">
+            <a href="https://reminder-service-f2q0.onrender.com" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-globe"></i></span>
+              <span class="link-text">Live URL</span>
+              <span class="link-url">reminder-service-f2q0.onrender.com</span>
+            </a>
+            <a href="https://reminder-service-f2q0.onrender.com/docs" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-file-alt"></i></span>
+              <span class="link-text">Swagger Docs</span>
+              <span class="link-url">/docs</span>
+            </a>
+            <a href="https://reminder-service-f2q0.onrender.com/redoc" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-book"></i></span>
+              <span class="link-text">ReDoc Docs</span>
+              <span class="link-url">/redoc</span>
+            </a>
+            <a href="https://reminder-service-f2q0.onrender.com/openapi.json" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-code"></i></span>
+              <span class="link-text">OpenAPI JSON</span>
+              <span class="link-url">/openapi.json</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>EcoHealth Microservices Documentation &copy; 2023</p>
+    </footer>
+  </div>
+</body>
+</html>
