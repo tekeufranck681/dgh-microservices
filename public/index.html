@@ -126,7 +126,10 @@
       background-color: #d6f3e7;
       color: #008a4a;
     }
-
+   .tag-frontend {
+  background-color: #f0e6ff;  /* Light purple background */
+  color: #8c4fff;            /* Rich purple color */
+}
     .card-body {
       padding: 1.5rem;
     }
@@ -327,6 +330,26 @@
       </div>
       
       <div class="services-grid">
+        <!-- Frontend Application -->
+        <div class="service-card">
+          <div class="card-header">
+            <h3 class="service-name">Frontend Application</h3>
+            <span class="service-tag tag-frontend">Frontend URL</span>
+          </div>
+          <div class="card-body">
+            <a href="https://carebridge-dgh.vercel.app" target="_blank" class="service-link">
+              <span class="link-icon"><i class="fas fa-globe"></i></span>
+              <span class="link-text">Live URL</span>
+              <span class="link-url">carebridge-dgh.vercel.app</span>
+            </a>
+            <div style="padding: 0.75rem 0; color: var(--secondary-color); font-size: 0.9rem;">
+              <p>The frontend application provides the user interface for the Track-1 services.</p>
+              <p>It integrates with related Track-1 microservices  and shared services to deliver a seamless user experience.</p>
+              <p>Comprehensive Dashboard for Admin and Doctors to manage patients, view feedbacks.</p>
+            </div>
+          </div>
+        </div>
+
         <!-- Feedback Input Service -->
         <div class="service-card">
           <div class="card-header">
