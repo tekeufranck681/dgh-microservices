@@ -134,6 +134,10 @@
         background-color: #fff3d6;
         color: #e6c700;
       }
+      .tag-track3 {
+        background-color: #fff0f6; /* Soft pink background */
+        color: #d6336c; /* Medical pink-red */
+      }
       .tag-frontend {
         background-color: #f0e6ff; /* Light purple background */
         color: #8c4fff; /* Rich purple color */
@@ -646,6 +650,44 @@
         </div>
 
         <div class="services-grid">
+          <!-- Frontend Application -->
+          <div class="service-card">
+            <div class="card-header">
+              <h3 class="service-name">Frontend Application</h3>
+              <span class="service-tag tag-frontend">Frontend 3 URL</span>
+            </div>
+            <div class="card-body">
+              <a
+                href="https://patient-chatbot.vercel.app"
+                target="_blank"
+                class="service-link"
+              >
+                <span class="link-icon"><i class="fas fa-globe"></i></span>
+                <span class="link-text">Live URL</span>
+                <span class="link-url">https://patient-chatbot.vercel.app</span>
+              </a>
+              <div
+                style="
+                  padding: 0.75rem 0;
+                  color: var(--secondary-color);
+                  font-size: 0.9rem;
+                "
+              >
+                <p>
+                  The frontend application provides the user interface for the
+                  Track-2 patient focussed services.
+                </p>
+                <p>
+                  It integrates with related Track-2 microservice and shared
+                  services to deliver a seamless patient diagnostic experience.
+                </p>
+                <p>
+                  Comprehensive Chatbot for patients to educate and inform them
+                  on their health and well-being.
+                </p>
+              </div>
+            </div>
+          </div>
           <!-- ChatBot Service -->
           <div class="service-card">
             <div class="card-header">
@@ -684,6 +726,65 @@
               </a>
               <a
                 href="https://chatbot-microservice-cie6.onrender.com/openapi.json"
+                target="_blank"
+                class="service-link"
+              >
+                <span class="link-icon"><i class="fas fa-code"></i></span>
+                <span class="link-text">OpenAPI JSON</span>
+                <span class="link-url">/openapi.json</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">
+            <i class="fas fa-heartbeat" style="margin-right: 10px"></i>
+            Track-3 Microservices
+          </h2>
+        </div>
+
+        <div class="services-grid">
+          <!-- Blood Inventory Service -->
+          <div class="service-card">
+            <div class="card-header">
+              <h3 class="service-name">Blood Inventory Service</h3>
+              <span class="service-tag tag-track3">Track-3</span>
+            </div>
+            <div class="card-body">
+              <a
+                href="https://patient-feedback-reminder-dnqw.onrender.com"
+                target="_blank"
+                class="service-link"
+              >
+                <span class="link-icon"><i class="fas fa-globe"></i></span>
+                <span class="link-text">Live URL</span>
+                <span class="link-url"
+                  >patient-feedback-reminder-dnqw.onrender.com</span
+                >
+              </a>
+              <a
+                href="https://patient-feedback-reminder-dnqw.onrender.com/docs"
+                target="_blank"
+                class="service-link"
+              >
+                <span class="link-icon"><i class="fas fa-file-alt"></i></span>
+                <span class="link-text">Swagger Docs</span>
+                <span class="link-url">/docs</span>
+              </a>
+              <a
+                href="https://patient-feedback-reminder-dnqw.onrender.com/redoc"
+                target="_blank"
+                class="service-link"
+              >
+                <span class="link-icon"><i class="fas fa-book"></i></span>
+                <span class="link-text">ReDoc Docs</span>
+                <span class="link-url">/redoc</span>
+              </a>
+              <a
+                href="https://patient-feedback-reminder-dnqw.onrender.com/openapi.json"
                 target="_blank"
                 class="service-link"
               >
